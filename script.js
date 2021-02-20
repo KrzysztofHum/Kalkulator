@@ -59,13 +59,13 @@ class Calculator {
 
         getDisplayNumber(number) {
         const stringNumber = number.toString()
-        const integerDigits = praseFloat(stringNumber.split('.')[0])
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
         const decimalDigits = stringNumber.split('.')[1]
         let integerDisplay
         if(isNaN(integerDigits)) {
-            integerDigits = ''
+            integerDisplay = ''
         } else {
-            integerDigits = integerDigits.toLocaleString('em', {
+            integerDisplay = integerDigits.toLocaleString('en', {
                 maximumFractionDigits: 0 })
             }
             if (decimalDigits != null) {
